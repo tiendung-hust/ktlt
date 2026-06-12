@@ -3,8 +3,9 @@
 
 ---
 
-**Nhóm 12:** Dương Tiến Dũng và Phan Tiến Hưng 
-\ **Trường:** Đại học Bách Khoa Hà Nội
+**Nhóm 12:** Dương Tiến Dũng và Phan Tiến Hưng  
+
+**Trường:** Đại học Bách Khoa Hà Nội
 
 # Mục lục
 ## Tổng quan dự án
@@ -244,7 +245,7 @@ FUNCTION results(user_answers, exam_data, userTime):
 | **Fisher-Yates Shuffle** | $O(N)$ | $O(N)$ |
 | **Bubble Sort** | $O(N^2)$ | $O(N)$ |
 | **`generate_exam`** | $O(N + M)$ | $O(M)$ |
-*(Với $N$: tổng số câu hỏi trong ngân hàng, $M$: số câu hỏi trong một đề thi)*
+*(Với N: tổng số câu hỏi trong ngân hàng, M: số câu hỏi trong một đề thi)*
 
 ---
 
@@ -254,3 +255,15 @@ FUNCTION results(user_answers, exam_data, userTime):
 ---
 
 # Cấu trúc báo cáo
+
+File báo cáo (word), thể thức (font chữ, trình bày) tham khảo mẫu đồ án của Đại học. Một số thông tin cần có: 
+
+thông tin người thực hiện, phân công (nếu là nhóm) 
+
+* Mô tả tổng thể chức năng, cách thiết kế/tổ chức chương trình, file dữ liệu 
+
+* Tình huống kiểm thử, kết quả thực hiện (hình ảnh chụp kết quả)  
+
+* Tổng kết các kỹ thuật đã vận dụng 
+
+* Phụ lục code hàm main, các mô tả hàm xử lý tác nghiệp chính
