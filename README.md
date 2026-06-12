@@ -236,7 +236,7 @@ FUNCTION results(user_answers, exam_data, userTime):
             
     score = (correct_count / LENGTH(exam_data.questions)) * 10
     RETURN {score, correct_count, total, userTime, uncorrect_list}
-
+```
 ###  Phân tích độ phức tạp thuật toán
 
 | Thuật toán | Thời gian (Time) | Không gian (Space) |
@@ -245,7 +245,7 @@ FUNCTION results(user_answers, exam_data, userTime):
 | **Bubble Sort** | $O(N^2)$ | $O(N)$ |
 | **`generate_exam`** | $O(N + M)$ | $O(M)$ |
 *(Với $N$: tổng số câu hỏi trong ngân hàng, $M$: số câu hỏi trong một đề thi)*
-```
+
 ---
 
 # Kiểm thử và đo hiệu năng
