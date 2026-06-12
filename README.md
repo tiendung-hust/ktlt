@@ -8,16 +8,16 @@
 **Trường:** Đại học Bách Khoa Hà Nội
 
 ## Mục lục
-* [Tổng quan dự án](#tổng-quan-dự-án)
-* [Yêu cầu nộp bài](#yêu-cầu-nộp-bài)
-* [Phân công nhóm](#phân-công-nhóm)
-* [Phân tích bài toán](#phân-tích-bài-toán)
-* [Thiết kế hệ thống](#thiết-kế-hệ-thống)
-* [Thuật Toán](#thuật-toán)
-* [Kiểm thử và đo hiệu năng](#kiểm-thử-và-đo-hiệu-năng)
-* [Cấu trúc báo cáo](#cấu-trúc-báo-cáo)
+* [1.Tổng quan dự án](#tổng-quan-dự-án)
+* [2.Yêu cầu nộp bài](#yêu-cầu-nộp-bài)
+* [3.Phân công nhóm](#phân-công-nhóm)
+* [4.Phân tích bài toán](#phân-tích-bài-toán)
+* [5.Thiết kế hệ thống](#thiết-kế-hệ-thống)
+* [6.Thuật Toán](#thuật-toán)
+* [7.Kiểm thử và đo hiệu năng](#kiểm-thử-và-đo-hiệu-năng)
+* [8.Cấu trúc báo cáo](#cấu-trúc-báo-cáo)
 ---
-## Tổng quan dự án:
+## 1.Tổng quan dự án:
 **Ngôn ngữ lựa chọn:** Python.
 ### 1.1 Mô tả bài toán: 
 
@@ -35,18 +35,18 @@ Hệ thống hỗ trợ quản lý ngân hàng câu hỏi, tự động tạo đ
 
 ---
 
-## Yêu cầu nộp bài
+## 2.Yêu cầu nộp bài
 
-## 1. Yêu cầu kỹ thuật cốt lõi
+### 2.1. Yêu cầu kỹ thuật cốt lõi
 - **Tự cài đặt cấu trúc dữ liệu:** Không được sử dụng các cấu trúc dữ liệu nâng cao hoặc thư viện có sẵn (ví dụ: `list`, `hash`, `queue`, thư viện ma trận, thư viện số lớn, các thư viện sắp xếp/tìm kiếm tích hợp sẵn).
 - **Yêu cầu:** Phải tự cài đặt thủ công toàn bộ các cấu trúc dữ liệu và thuật toán được sử dụng trong chương trình.
 
-## 2. Yêu cầu chung của chương trình
+### 2.2. Yêu cầu chung của chương trình
 - **Menu điều khiển:** Người dùng chọn tác vụ từ menu đơn giản để thực hiện các chức năng cho đến khi chọn kết thúc chương trình.
 - **Lưu trữ dữ liệu:** Dữ liệu vào/ra phải được lưu trữ trong file văn bản (định dạng gợi ý: JSON, XML, hoặc lưu theo dòng). Cho phép nhập liệu từ bàn phím và xuất dữ liệu xuống file.
 - **Kỹ thuật lập trình:** Vận dụng đúng các kỹ thuật thiết kế, lập trình và kiểm thử phần mềm.
 
-## 3. Yêu cầu kết quả nộp bài
+### 2.3. Yêu cầu kết quả nộp bài
 Kết quả nộp bài bao gồm 2 thành phần chính:
 
 ### (1) File Báo cáo (định dạng Word)
@@ -66,9 +66,9 @@ Chứa toàn bộ mã nguồn của chương trình:
 
 ---
 
-## Phân công nhóm 
+## 3.Phân công nhóm 
 
-### 2.1 Thành viên 1: Logic lõi 
+### 3.1 Thành viên 1: Logic lõi 
 Trọng tâm là xử lý mảng và từ điển bằng code tay:
 - **`core/algorithms.py`**:
     - `randomLCG`: Class sinh số ngẫu nhiên thủ công (Linear Congruential Generator).
@@ -78,7 +78,7 @@ Trọng tâm là xử lý mảng và từ điển bằng code tay:
     - `exam`: Lọc câu hỏi theo môn/độ khó, bốc câu hỏi ngẫu nhiên và xáo trộn đáp án.
     - `results`: Chấm điểm tự động và trả về dữ liệu đối chiếu lỗi sai cho Dashboard.
 
-### 2.2 Thành viên 2: Giao diện & Dữ liệu 
+### 3.2 Thành viên 2: Giao diện & Dữ liệu 
 Trọng tâm là xây dựng GUI và quản lý trạng thái:
 - **`gui/datahand.py`**: 
     - `loaddata` / `savedata`: Xử lý nạp và lưu trữ file dữ liệu.
@@ -89,9 +89,9 @@ Trọng tâm là xây dựng GUI và quản lý trạng thái:
 
 ---
 
-## Phân tích bài toán 
+## 4.Phân tích bài toán 
 
-### Đầu vào (Input) và Đầu ra (Output)
+### 4.1.Đầu vào (Input) và Đầu ra (Output)
 
 * Đầu vào:
 - **Ngân hàng câu hỏi:** File `questions.json` chứa danh sách câu hỏi, bao gồm: nội dung, 4 đáp án, đáp án đúng và phân loại độ khó (Dễ/Vừa/Khó).
@@ -105,7 +105,7 @@ Trọng tâm là xây dựng GUI và quản lý trạng thái:
 - **Lịch sử thi:** Lưu trữ kết quả vào `results.json` để phục vụ chức năng bảng xếp hạng.
 
 
-### Cấu trúc dữ liệu
+### 4.2.Cấu trúc dữ liệu
 
 | Cấu trúc | Mục đích | Lý do chọn |
 | :--- | :--- | :--- |
@@ -117,8 +117,8 @@ Trọng tâm là xây dựng GUI và quản lý trạng thái:
 
 ---
 
-## Thiết kế hệ thống 
-### Thiết kế Diagram
+## 5.Thiết kế hệ thống 
+### 5.1.Thiết kế Diagram
 ```text
 +-----------------------+    +-----------------------+
 |      Question         |    |      ExamEngine       |
@@ -148,7 +148,7 @@ Trọng tâm là xây dựng GUI và quản lý trạng thái:
 | + updateDisplay()     |
 +-----------------------+
 ```
-### Format dữ liệu(JSON)
+### 5.2.Format dữ liệu(JSON)
 ```text
 {
     "id": 1,
@@ -166,9 +166,9 @@ Trọng tâm là xây dựng GUI và quản lý trạng thái:
 ```
 ---
 
-## Thuật toán
+## 6.Thuật toán
 
-### Peseudocode
+### 6.1.Peseudocode
 ```text
 CLASS randomLCG:
     FUNCTION initialize(seed):
@@ -238,7 +238,7 @@ FUNCTION results(user_answers, exam_data, userTime):
     score = (correct_count / LENGTH(exam_data.questions)) * 10
     RETURN {score, correct_count, total, userTime, uncorrect_list}
 ```
-###  Phân tích độ phức tạp thuật toán
+###  6.2.Phân tích độ phức tạp thuật toán
 
 | Thuật toán | Thời gian (Time) | Không gian (Space) |
 | :--- | :--- | :--- |
@@ -249,12 +249,12 @@ FUNCTION results(user_answers, exam_data, userTime):
 
 ---
 
-## Kiểm thử và đo hiệu năng
+## 7.Kiểm thử và đo hiệu năng
 
 
 ---
 
-## Cấu trúc báo cáo
+## 8.Cấu trúc báo cáo
 
 File báo cáo (word), thể thức (font chữ, trình bày) tham khảo mẫu đồ án của Đại học. Một số thông tin cần có: 
 
