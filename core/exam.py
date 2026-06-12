@@ -68,7 +68,7 @@ def results(user_answers, exam_data, userTime):
         if i < len(user_answers):                                                                  
             user_choice = user_answers[i]                                     #Lấy nhãn đáp án người dùng chọn (mặc định là None nếu họ bỏ trống)
         else: 
-            None   
+            user_choice=None 
       
         correct_label = q['correct_label']
         
@@ -87,7 +87,7 @@ def results(user_answers, exam_data, userTime):
     if total > 0:
         score = (correct_count / total) * 10  
     else:       
-        0
+        score=0
     
     return {
         "score": round(score, 2),
