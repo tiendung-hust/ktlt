@@ -42,7 +42,6 @@ def updateComment(filepath, exam_id, comment):
     # Duyệt qua mảng kết quả để tìm đúng bài thi
     for item in data:
         if item.get("exam_id") == exam_id:
-            item["teacher_comment"] = comment
             item["status"] = "graded"  # Cập nhật trạng thái thành 'đã chấm'
             is_updated = True
             break  # nếu tìm thấy thì thoát vòng lặp

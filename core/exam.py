@@ -16,7 +16,7 @@ def exam(dur_time, bank, count, subj, diff_matrix):
         num_ques = int(count * tile)
         
         # Lấy câu hỏi từ bank
-        filtered = [q for q in bank if q['subject'] == subj and q['difficulty'] == diff]
+        filtered = [q for q in bank if q['subject'].strip() == subj.strip() and q['difficulty'].strip() == diff.strip()]
         
         if len(filtered) < num_ques:
             print(f"Cảnh báo: Không đủ câu hỏi cho độ khó {diff}")
@@ -120,13 +120,13 @@ def results(username, user_answers, exam_data, userTime):
     result_package = {
         "exam_id": exam_id,
         "username": username,
+        "subject": exam_data["data"]["subject"],
         "score": round(score, 2),
         "correct_count": correct_count,
         "total": total,
         "userTime": userTime,
         "uncorrect": uncorrect_ques,
         "status": "pending",         # Trạng thái chờ giáo viên chấm bài
-        "teacher_comment": None      # Mặc định lời phê để trống
     }
     
     # Kích hoạt lưu thẳng kết quả xuống file JSON
