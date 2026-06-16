@@ -1,4 +1,4 @@
-from algorithms import shuffle
+from core.algorithms import shuffle
 from core import datahand  
 import time
 
@@ -26,7 +26,7 @@ def exam(dur_time, bank, count, subj, diff_matrix):
         shuffled = shuffle(filtered, seed)
         
         # Nạp câu hỏi vào đề thi
-        ex_ques.extend(shuffled[:num_ques])                 
+        ex_ques.extend(shuffled[:num_ques])                
     
     # Xáo trộn lại đề thi lần cuối
     final_shuffle = shuffle(ex_ques, seed)                    
@@ -77,7 +77,7 @@ def results(username, user_answers, exam_data, userTime):
 
     for i, q in enumerate(exam_data['questions']):
         # Lấy đáp án người dùng chọn (mặc định là None nếu họ bỏ trống)
-        if i < len(user_answers):                                                 
+        if i < len(user_answers):                                               
             user_choice = user_answers[i]                                     
         else: 
             user_choice = None 
@@ -115,24 +115,6 @@ def results(username, user_answers, exam_data, userTime):
         
         last_num = int(last_id_str.split("_")[1])
         exam_id = f"EXAM_{last_num + 1}"
-    
-    # Đóng gói khối dữ liệu kết quả 
-    result_package = {
-        "exam_id": exam_id,
-        "username": username,
-        "score": round(score, 2),
-        "correct_count": correct_count,
-        "total": total,
-        "userTime": userTime,
-        "uncorrect": uncorrect_ques,
-        "status": "pending",         # Trạng thái chờ giáo viên chấm bài
-        "teacher_comment": None      # Mặc định lời phê để trống
-    }
-    
-    # Kích hoạt lưu thẳng kết quả xuống file JSON
-    datahand.updateData(datahand.RESULTS_FILE, result_package)
-    
-    return result_package
     
     # Đóng gói khối dữ liệu kết quả 
     result_package = {

@@ -1,5 +1,3 @@
-import time
-
 class randomLCG:
     def __init__(self, seed):
         #Bộ hệ số LCG của Numerical Recipes

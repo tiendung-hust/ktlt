@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 12 + 8.",
     "answers": {
@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 13 + 9.",
     "answers": {
@@ -27,7 +27,7 @@
   },
   {
     "id": 3,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 14 + 10.",
     "answers": {
@@ -40,7 +40,7 @@
   },
   {
     "id": 4,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 15 + 11.",
     "answers": {
@@ -53,7 +53,7 @@
   },
   {
     "id": 5,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 16 + 12.",
     "answers": {
@@ -66,7 +66,7 @@
   },
   {
     "id": 6,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 17 + 13.",
     "answers": {
@@ -79,7 +79,7 @@
   },
   {
     "id": 7,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 18 + 14.",
     "answers": {
@@ -92,7 +92,7 @@
   },
   {
     "id": 8,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 19 + 15.",
     "answers": {
@@ -105,7 +105,7 @@
   },
   {
     "id": 9,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 20 + 16.",
     "answers": {
@@ -118,7 +118,7 @@
   },
   {
     "id": 10,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 21 + 17.",
     "answers": {
@@ -131,7 +131,7 @@
   },
   {
     "id": 11,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 22 + 18.",
     "answers": {
@@ -144,7 +144,7 @@
   },
   {
     "id": 12,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 23 + 19.",
     "answers": {
@@ -157,7 +157,7 @@
   },
   {
     "id": 13,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 24 + 20.",
     "answers": {
@@ -170,7 +170,7 @@
   },
   {
     "id": 14,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 25 + 21.",
     "answers": {
@@ -183,7 +183,7 @@
   },
   {
     "id": 15,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 26 + 22.",
     "answers": {
@@ -196,7 +196,7 @@
   },
   {
     "id": 16,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 27 + 23.",
     "answers": {
@@ -209,7 +209,7 @@
   },
   {
     "id": 17,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 28 + 24.",
     "answers": {
@@ -222,7 +222,7 @@
   },
   {
     "id": 18,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 29 + 25.",
     "answers": {
@@ -235,7 +235,7 @@
   },
   {
     "id": 19,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 30 + 26.",
     "answers": {
@@ -248,7 +248,7 @@
   },
   {
     "id": 20,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 31 + 27.",
     "answers": {
@@ -261,7 +261,7 @@
   },
   {
     "id": 21,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 30 - 5.",
     "answers": {
@@ -274,7 +274,7 @@
   },
   {
     "id": 22,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 31 - 6.",
     "answers": {
@@ -287,7 +287,7 @@
   },
   {
     "id": 23,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 32 - 7.",
     "answers": {
@@ -300,7 +300,7 @@
   },
   {
     "id": 24,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 33 - 8.",
     "answers": {
@@ -313,7 +313,7 @@
   },
   {
     "id": 25,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 34 - 9.",
     "answers": {
@@ -326,7 +326,7 @@
   },
   {
     "id": 26,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 35 - 10.",
     "answers": {
@@ -339,7 +339,7 @@
   },
   {
     "id": 27,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 36 - 11.",
     "answers": {
@@ -352,7 +352,7 @@
   },
   {
     "id": 28,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 37 - 12.",
     "answers": {
@@ -365,7 +365,7 @@
   },
   {
     "id": 29,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 38 - 13.",
     "answers": {
@@ -378,7 +378,7 @@
   },
   {
     "id": 30,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 39 - 14.",
     "answers": {
@@ -391,7 +391,7 @@
   },
   {
     "id": 31,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 40 - 15.",
     "answers": {
@@ -404,7 +404,7 @@
   },
   {
     "id": 32,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 41 - 16.",
     "answers": {
@@ -417,7 +417,7 @@
   },
   {
     "id": 33,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 42 - 17.",
     "answers": {
@@ -430,7 +430,7 @@
   },
   {
     "id": 34,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 43 - 18.",
     "answers": {
@@ -443,7 +443,7 @@
   },
   {
     "id": 35,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 44 - 19.",
     "answers": {
@@ -456,7 +456,7 @@
   },
   {
     "id": 36,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 45 - 20.",
     "answers": {
@@ -469,7 +469,7 @@
   },
   {
     "id": 37,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 46 - 21.",
     "answers": {
@@ -482,7 +482,7 @@
   },
   {
     "id": 38,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 47 - 22.",
     "answers": {
@@ -495,7 +495,7 @@
   },
   {
     "id": 39,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 48 - 23.",
     "answers": {
@@ -508,7 +508,7 @@
   },
   {
     "id": 40,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 49 - 24.",
     "answers": {
@@ -521,7 +521,7 @@
   },
   {
     "id": 41,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 2 × 2.",
     "answers": {
@@ -534,7 +534,7 @@
   },
   {
     "id": 42,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 3 × 3.",
     "answers": {
@@ -547,7 +547,7 @@
   },
   {
     "id": 43,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 4 × 4.",
     "answers": {
@@ -560,7 +560,7 @@
   },
   {
     "id": 44,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 5 × 5.",
     "answers": {
@@ -573,7 +573,7 @@
   },
   {
     "id": 45,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 6 × 6.",
     "answers": {
@@ -586,7 +586,7 @@
   },
   {
     "id": 46,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 7 × 2.",
     "answers": {
@@ -599,7 +599,7 @@
   },
   {
     "id": 47,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 8 × 3.",
     "answers": {
@@ -612,7 +612,7 @@
   },
   {
     "id": 48,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 9 × 4.",
     "answers": {
@@ -625,7 +625,7 @@
   },
   {
     "id": 49,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 10 × 5.",
     "answers": {
@@ -638,7 +638,7 @@
   },
   {
     "id": 50,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 2 × 6.",
     "answers": {
@@ -651,7 +651,7 @@
   },
   {
     "id": 51,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 3 × 2.",
     "answers": {
@@ -664,7 +664,7 @@
   },
   {
     "id": 52,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 4 × 3.",
     "answers": {
@@ -677,7 +677,7 @@
   },
   {
     "id": 53,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 5 × 4.",
     "answers": {
@@ -690,7 +690,7 @@
   },
   {
     "id": 54,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 6 × 5.",
     "answers": {
@@ -703,7 +703,7 @@
   },
   {
     "id": 55,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 7 × 6.",
     "answers": {
@@ -716,7 +716,7 @@
   },
   {
     "id": 56,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 8 × 2.",
     "answers": {
@@ -729,7 +729,7 @@
   },
   {
     "id": 57,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 9 × 3.",
     "answers": {
@@ -742,7 +742,7 @@
   },
   {
     "id": 58,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 10 × 4.",
     "answers": {
@@ -755,7 +755,7 @@
   },
   {
     "id": 59,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 2 × 5.",
     "answers": {
@@ -768,7 +768,7 @@
   },
   {
     "id": 60,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Tính 3 × 6.",
     "answers": {
@@ -781,7 +781,7 @@
   },
   {
     "id": 61,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 6 chia hết cho số nào sau đây?",
     "answers": {
@@ -794,7 +794,7 @@
   },
   {
     "id": 62,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 12 chia hết cho số nào sau đây?",
     "answers": {
@@ -807,7 +807,7 @@
   },
   {
     "id": 63,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 18 chia hết cho số nào sau đây?",
     "answers": {
@@ -820,7 +820,7 @@
   },
   {
     "id": 64,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 24 chia hết cho số nào sau đây?",
     "answers": {
@@ -833,7 +833,7 @@
   },
   {
     "id": 65,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 30 chia hết cho số nào sau đây?",
     "answers": {
@@ -846,7 +846,7 @@
   },
   {
     "id": 66,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 36 chia hết cho số nào sau đây?",
     "answers": {
@@ -859,7 +859,7 @@
   },
   {
     "id": 67,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 42 chia hết cho số nào sau đây?",
     "answers": {
@@ -872,7 +872,7 @@
   },
   {
     "id": 68,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 48 chia hết cho số nào sau đây?",
     "answers": {
@@ -885,7 +885,7 @@
   },
   {
     "id": 69,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 54 chia hết cho số nào sau đây?",
     "answers": {
@@ -898,7 +898,7 @@
   },
   {
     "id": 70,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 60 chia hết cho số nào sau đây?",
     "answers": {
@@ -911,7 +911,7 @@
   },
   {
     "id": 71,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 66 chia hết cho số nào sau đây?",
     "answers": {
@@ -924,7 +924,7 @@
   },
   {
     "id": 72,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 72 chia hết cho số nào sau đây?",
     "answers": {
@@ -937,7 +937,7 @@
   },
   {
     "id": 73,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 78 chia hết cho số nào sau đây?",
     "answers": {
@@ -950,7 +950,7 @@
   },
   {
     "id": 74,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 84 chia hết cho số nào sau đây?",
     "answers": {
@@ -963,7 +963,7 @@
   },
   {
     "id": 75,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 90 chia hết cho số nào sau đây?",
     "answers": {
@@ -976,7 +976,7 @@
   },
   {
     "id": 76,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 96 chia hết cho số nào sau đây?",
     "answers": {
@@ -989,7 +989,7 @@
   },
   {
     "id": 77,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 102 chia hết cho số nào sau đây?",
     "answers": {
@@ -1002,7 +1002,7 @@
   },
   {
     "id": 78,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 108 chia hết cho số nào sau đây?",
     "answers": {
@@ -1015,7 +1015,7 @@
   },
   {
     "id": 79,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 114 chia hết cho số nào sau đây?",
     "answers": {
@@ -1028,7 +1028,7 @@
   },
   {
     "id": 80,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Easy",
     "text": "Số 120 chia hết cho số nào sau đây?",
     "answers": {
@@ -1041,7 +1041,7 @@
   },
   {
     "id": 81,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 4/8.",
     "answers": {
@@ -1054,7 +1054,7 @@
   },
   {
     "id": 82,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 6/12.",
     "answers": {
@@ -1067,7 +1067,7 @@
   },
   {
     "id": 83,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 8/16.",
     "answers": {
@@ -1080,7 +1080,7 @@
   },
   {
     "id": 84,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 10/20.",
     "answers": {
@@ -1093,7 +1093,7 @@
   },
   {
     "id": 85,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 12/24.",
     "answers": {
@@ -1106,7 +1106,7 @@
   },
   {
     "id": 86,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 14/28.",
     "answers": {
@@ -1119,7 +1119,7 @@
   },
   {
     "id": 87,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 16/32.",
     "answers": {
@@ -1132,7 +1132,7 @@
   },
   {
     "id": 88,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 18/36.",
     "answers": {
@@ -1145,7 +1145,7 @@
   },
   {
     "id": 89,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 20/40.",
     "answers": {
@@ -1158,7 +1158,7 @@
   },
   {
     "id": 90,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 22/44.",
     "answers": {
@@ -1171,7 +1171,7 @@
   },
   {
     "id": 91,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 24/48.",
     "answers": {
@@ -1184,7 +1184,7 @@
   },
   {
     "id": 92,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 26/52.",
     "answers": {
@@ -1197,7 +1197,7 @@
   },
   {
     "id": 93,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 28/56.",
     "answers": {
@@ -1210,7 +1210,7 @@
   },
   {
     "id": 94,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 30/60.",
     "answers": {
@@ -1223,7 +1223,7 @@
   },
   {
     "id": 95,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Rút gọn phân số 32/64.",
     "answers": {
@@ -1236,7 +1236,7 @@
   },
   {
     "id": 96,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 5 = 8.",
     "answers": {
@@ -1249,7 +1249,7 @@
   },
   {
     "id": 97,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 6 = 10.",
     "answers": {
@@ -1262,7 +1262,7 @@
   },
   {
     "id": 98,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 7 = 12.",
     "answers": {
@@ -1275,7 +1275,7 @@
   },
   {
     "id": 99,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 8 = 14.",
     "answers": {
@@ -1288,7 +1288,7 @@
   },
   {
     "id": 100,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 9 = 16.",
     "answers": {
@@ -1301,7 +1301,7 @@
   },
   {
     "id": 101,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 10 = 18.",
     "answers": {
@@ -1314,7 +1314,7 @@
   },
   {
     "id": 102,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 11 = 20.",
     "answers": {
@@ -1327,7 +1327,7 @@
   },
   {
     "id": 103,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 12 = 22.",
     "answers": {
@@ -1340,7 +1340,7 @@
   },
   {
     "id": 104,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 13 = 24.",
     "answers": {
@@ -1353,7 +1353,7 @@
   },
   {
     "id": 105,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 14 = 26.",
     "answers": {
@@ -1366,7 +1366,7 @@
   },
   {
     "id": 106,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 15 = 28.",
     "answers": {
@@ -1379,7 +1379,7 @@
   },
   {
     "id": 107,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 16 = 30.",
     "answers": {
@@ -1392,7 +1392,7 @@
   },
   {
     "id": 108,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 17 = 32.",
     "answers": {
@@ -1405,7 +1405,7 @@
   },
   {
     "id": 109,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 18 = 34.",
     "answers": {
@@ -1418,7 +1418,7 @@
   },
   {
     "id": 110,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Tìm x biết x + 19 = 36.",
     "answers": {
@@ -1431,7 +1431,7 @@
   },
   {
     "id": 111,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 5 cm, rộng 2 cm. Diện tích bằng?",
     "answers": {
@@ -1444,7 +1444,7 @@
   },
   {
     "id": 112,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 6 cm, rộng 3 cm. Diện tích bằng?",
     "answers": {
@@ -1457,7 +1457,7 @@
   },
   {
     "id": 113,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 7 cm, rộng 4 cm. Diện tích bằng?",
     "answers": {
@@ -1470,7 +1470,7 @@
   },
   {
     "id": 114,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 8 cm, rộng 5 cm. Diện tích bằng?",
     "answers": {
@@ -1483,7 +1483,7 @@
   },
   {
     "id": 115,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 9 cm, rộng 6 cm. Diện tích bằng?",
     "answers": {
@@ -1496,7 +1496,7 @@
   },
   {
     "id": 116,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 10 cm, rộng 7 cm. Diện tích bằng?",
     "answers": {
@@ -1509,7 +1509,7 @@
   },
   {
     "id": 117,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 11 cm, rộng 8 cm. Diện tích bằng?",
     "answers": {
@@ -1522,7 +1522,7 @@
   },
   {
     "id": 118,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 12 cm, rộng 9 cm. Diện tích bằng?",
     "answers": {
@@ -1535,7 +1535,7 @@
   },
   {
     "id": 119,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 13 cm, rộng 10 cm. Diện tích bằng?",
     "answers": {
@@ -1548,7 +1548,7 @@
   },
   {
     "id": 120,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 14 cm, rộng 11 cm. Diện tích bằng?",
     "answers": {
@@ -1561,7 +1561,7 @@
   },
   {
     "id": 121,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 15 cm, rộng 12 cm. Diện tích bằng?",
     "answers": {
@@ -1574,7 +1574,7 @@
   },
   {
     "id": 122,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 16 cm, rộng 13 cm. Diện tích bằng?",
     "answers": {
@@ -1587,7 +1587,7 @@
   },
   {
     "id": 123,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 17 cm, rộng 14 cm. Diện tích bằng?",
     "answers": {
@@ -1600,7 +1600,7 @@
   },
   {
     "id": 124,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 18 cm, rộng 15 cm. Diện tích bằng?",
     "answers": {
@@ -1613,7 +1613,7 @@
   },
   {
     "id": 125,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Medium",
     "text": "Hình chữ nhật dài 19 cm, rộng 16 cm. Diện tích bằng?",
     "answers": {
@@ -1626,7 +1626,7 @@
   },
   {
     "id": 126,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Tìm số tự nhiên n biết 3n + 7 = 37.",
     "answers": {
@@ -1639,7 +1639,7 @@
   },
   {
     "id": 127,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Tìm số tự nhiên n biết 3n + 7 = 40.",
     "answers": {
@@ -1652,7 +1652,7 @@
   },
   {
     "id": 128,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Tìm số tự nhiên n biết 3n + 7 = 43.",
     "answers": {
@@ -1665,7 +1665,7 @@
   },
   {
     "id": 129,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Tìm số tự nhiên n biết 3n + 7 = 46.",
     "answers": {
@@ -1678,7 +1678,7 @@
   },
   {
     "id": 130,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Tìm số tự nhiên n biết 3n + 7 = 49.",
     "answers": {
@@ -1691,7 +1691,7 @@
   },
   {
     "id": 131,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Tìm số tự nhiên n biết 3n + 7 = 52.",
     "answers": {
@@ -1704,7 +1704,7 @@
   },
   {
     "id": 132,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Tìm số tự nhiên n biết 3n + 7 = 55.",
     "answers": {
@@ -1717,7 +1717,7 @@
   },
   {
     "id": 133,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Tìm số tự nhiên n biết 3n + 7 = 58.",
     "answers": {
@@ -1730,7 +1730,7 @@
   },
   {
     "id": 134,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Tìm số tự nhiên n biết 3n + 7 = 61.",
     "answers": {
@@ -1743,7 +1743,7 @@
   },
   {
     "id": 135,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Tìm số tự nhiên n biết 3n + 7 = 64.",
     "answers": {
@@ -1756,7 +1756,7 @@
   },
   {
     "id": 136,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Một lớp có 30 học sinh, trong đó 2/5 là nữ. Số học sinh nữ là bao nhiêu?",
     "answers": {
@@ -1769,7 +1769,7 @@
   },
   {
     "id": 137,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Một lớp có 31 học sinh, trong đó 2/5 là nữ. Số học sinh nữ là bao nhiêu?",
     "answers": {
@@ -1782,7 +1782,7 @@
   },
   {
     "id": 138,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Một lớp có 32 học sinh, trong đó 2/5 là nữ. Số học sinh nữ là bao nhiêu?",
     "answers": {
@@ -1795,7 +1795,7 @@
   },
   {
     "id": 139,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Một lớp có 33 học sinh, trong đó 2/5 là nữ. Số học sinh nữ là bao nhiêu?",
     "answers": {
@@ -1808,7 +1808,7 @@
   },
   {
     "id": 140,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Một lớp có 34 học sinh, trong đó 2/5 là nữ. Số học sinh nữ là bao nhiêu?",
     "answers": {
@@ -1821,7 +1821,7 @@
   },
   {
     "id": 141,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Một lớp có 35 học sinh, trong đó 2/5 là nữ. Số học sinh nữ là bao nhiêu?",
     "answers": {
@@ -1834,7 +1834,7 @@
   },
   {
     "id": 142,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Một lớp có 36 học sinh, trong đó 2/5 là nữ. Số học sinh nữ là bao nhiêu?",
     "answers": {
@@ -1847,7 +1847,7 @@
   },
   {
     "id": 143,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Một lớp có 37 học sinh, trong đó 2/5 là nữ. Số học sinh nữ là bao nhiêu?",
     "answers": {
@@ -1860,7 +1860,7 @@
   },
   {
     "id": 144,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Một lớp có 38 học sinh, trong đó 2/5 là nữ. Số học sinh nữ là bao nhiêu?",
     "answers": {
@@ -1873,7 +1873,7 @@
   },
   {
     "id": 145,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "Một lớp có 39 học sinh, trong đó 2/5 là nữ. Số học sinh nữ là bao nhiêu?",
     "answers": {
@@ -1886,7 +1886,7 @@
   },
   {
     "id": 146,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "ƯCLN của 24 và 36 là bao nhiêu?",
     "answers": {
@@ -1899,7 +1899,7 @@
   },
   {
     "id": 147,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "ƯCLN của 30 và 42 là bao nhiêu?",
     "answers": {
@@ -1912,7 +1912,7 @@
   },
   {
     "id": 148,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "ƯCLN của 36 và 48 là bao nhiêu?",
     "answers": {
@@ -1925,7 +1925,7 @@
   },
   {
     "id": 149,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "ƯCLN của 42 và 54 là bao nhiêu?",
     "answers": {
@@ -1938,7 +1938,7 @@
   },
   {
     "id": 150,
-    "subject": "Toan",
+    "subject": "Math",
     "difficulty": "Hard",
     "text": "ƯCLN của 48 và 60 là bao nhiêu?",
     "answers": {
