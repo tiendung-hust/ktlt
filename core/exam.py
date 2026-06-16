@@ -126,7 +126,6 @@ def results(username, user_answers, exam_data, userTime):
         "total": total,
         "userTime": userTime,
         "uncorrect": uncorrect_ques,
-        "status": "pending",         # Trạng thái chờ giáo viên chấm bài
     }
     
     # Kích hoạt lưu thẳng kết quả xuống file JSON
