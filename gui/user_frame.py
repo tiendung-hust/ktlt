@@ -101,7 +101,6 @@ class UserFrame(tk.Frame):
             
         self.render_exam_frame(duration)
 
-    # --- FRAME 2: MÀN HÌNH LÀM BÀI (SỬA LỖI KHÔNG LĂN ĐƯỢC CHUỘT) ---
     def render_exam_frame(self, duration_mins):
         self.clean_screen()
         
@@ -130,7 +129,6 @@ class UserFrame(tk.Frame):
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
         
-        # --- CƠ CHẾ LĂN CHUỘT AN TOÀN TUYỆT ĐỐI ---
         def _on_mousewheel(event):
             if canvas.winfo_exists():
                 # Lệnh cuộn chuẩn cho Windows và MacOS
@@ -281,7 +279,6 @@ class UserFrame(tk.Frame):
         txt_box.config(state="disabled")
         tk.Button(container, text="Quay Về Menu Cấu Hình", bg="#555", fg="white", font=("Helvetica", 10, "bold"), padx=15, command=self.render_start_frame, relief="flat").pack(anchor="e")
 
-    # --- FRAME 5: XEM BẢNG XẾP HẠNG PHÂN TÁCH 3 MÔN RIỆNG BIỆT ---
     def show_leaderboard_frame(self):
         self.clean_screen()
         self.controller.refresh_results_from_disk()
@@ -302,7 +299,7 @@ class UserFrame(tk.Frame):
         subjects_config = [
             {"tab_title": "  Môn Toán (Math)  ", "json_name": "Math"},
             {"tab_title": "  Môn Tiếng Anh (English)  ", "json_name": "English"},
-            {"tab_title": "  Môn Ngữ Văn (Vietnamese)  ", "json_name": "Vietnamese "} # Giữ nguyên khoảng trắng thừa nếu file JSON của ông dùng chuỗi này
+            {"tab_title": "  Môn Ngữ Văn (Vietnamese)  ", "json_name": "Vietnamese "}
         ]
         
         columns = ("rank", "exam_id", "user", "score", "time")
