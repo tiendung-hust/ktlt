@@ -44,12 +44,16 @@ class UserFrame(tk.Frame):
         self.cbo_count = ttk.Combobox(config_box, values=["10", "20", "30", "40"], state="readonly", font=("Helvetica", 10))
         self.cbo_count.pack(fill="x", pady=4); self.cbo_count.set("10")
         
-        tk.Label(config_box, text="Ma trận mức độ đề thi (% Dễ - % Vừa - % Khó):", bg="white", font=("Helvetica", 9, "bold")).pack(anchor="w", pady=5)
+        tk.Label(config_box, text="Ma trận mức độ đề thi (% Dễ - % Vừa - % Khó):", bg="white", font=("Helvetica", 9)).pack(anchor="w", pady=5)
         matrix_presets = [
             "100% Dễ - 0% Vừa - 0% Khó",
             "50% Dễ - 50% Vừa - 0% Khó",
+            "50% Dễ - 30% Vừa - 20% Khó",
+            "40% Dễ - 40% Vừa - 20% Khó",
             "30% Dễ - 40% Vừa - 30% Khó",
-            "0% Dễ - 50% Vừa - 50% Khó"
+            "0% Dễ - 80% Vừa - 20% Khó",
+            "0% Dễ - 50% Vừa - 50% Khó",
+            "0% Dễ - 0% Vừa - 100% Khó"
         ]
         self.cbo_matrix = ttk.Combobox(config_box, values=matrix_presets, state="readonly", font=("Helvetica", 10))
         self.cbo_matrix.pack(fill="x", pady=4); self.cbo_matrix.set("50% Dễ - 50% Vừa - 0% Khó")
@@ -114,12 +118,53 @@ class UserFrame(tk.Frame):
         scrollbar = ttk.Scrollbar(canvas_pane, orient="vertical", command=canvas.yview)
         scroll_content = tk.Frame(canvas, bg="#f8f9fa", padx=35)
         
-        scroll_content.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+        # Hàm tự động cập nhật lại vùng cuộn (scrollregion) cho Canvas bất kể đề dài hay ngắn
+        def _configure_window(event):
+            canvas.configure(scrollregion=canvas.bbox("all"))
+            
+        scroll_content.bind("<Configure>", _configure_window)
         canvas.create_window((0, 0), window=scroll_content, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
         
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
+        
+        def _on_mousewheel(event):
+            if canvas.winfo_exists():
+                # Lệnh cuộn chuẩn cho Windows và MacOS
+                canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
+        # Sử dụng bind_all kết hợp kiểm tra winfo_exists để đảm bảo nhận chuột trên toàn giao diện phòng thi
+        self.bind_all("<MouseWheel>", _on_mousewheel)
+        
+        # Hỗ trợ thêm cuộn chuột cho hệ điều hành Linux (nếu có)
+        self.bind_all("<Button-4>", lambda e: canvas.yview_scroll(-1, "units") if canvas.winfo_exists() else None)
+        self.bind_all("<Button-5>", lambda e: canvas.yview_scroll(1, "units") if canvas.winfo_exists() else None)
+        
+        self.radio_variables = []
+        for idx, q in enumerate(self.active_exam_data["questions"]):
+            q_box = tk.Frame(scroll_content, bg="white", bd=1, relief="groove", padx=15, pady=12)
+            q_box.pack(fill="x", pady=8)
+            
+            tk.Label(q_box, text=f"Câu {idx + 1}: {q['text']} [{q['difficulty']}]", font=("Helvetica", 11, "bold"), bg="white", justify="left", anchor="w", wraplength=720).pack(anchor="w", pady=4)
+            
+            var = tk.StringVar(value="None")
+            self.radio_variables.append(var)
+            
+            for label, choice_text in q["answers"].items():
+                tk.Radiobutton(q_box, text=f"{label}. {choice_text}", variable=var, value=label, font=("Helvetica", 10), bg="white", fg="#202124", activebackground="white").pack(anchor="w", padx=20, pady=2)
+                
+        btn_finish = tk.Button(scroll_content, text="HOÀN THÀNH & NỘP BÀI THI", font=("Helvetica", 11, "bold"), bg="#1a73e8", fg="white", padx=40, pady=10, relief="flat", command=self.handle_manual_submit, cursor="hand2")
+        btn_finish.pack(pady=30)
+        
+        # Ép buộc Tkinter cập nhật lại kích thước nội dung ngay lập tức để tính toán thanh cuộn
+        self.update_idletasks()
+        canvas.configure(scrollregion=canvas.bbox("all"))
+        
+        self.seconds_remaining = duration_mins * 60
+        self.exam_start_time = time.time()
+        self.exam_timer_running = True
+        self.countdown_tick_logic()
         
         def _on_mousewheel(event):
             # Kiểm tra xem widget canvas có còn tồn tại không trước khi gọi lệnh cuộn
@@ -239,25 +284,61 @@ class UserFrame(tk.Frame):
         self.controller.refresh_results_from_disk()
         
         container = tk.Frame(self, bg="#f4f6f9", padx=25, pady=20)
-        container.pack(fill="both", expand=True)
+        container.pack(side="top", fill="both", expand=True)
         
         tk.Label(container, text="🏆 BẢNG XẾP HẠNG THÍ SINH ĐIỂM CAO", font=("Helvetica", 12, "bold"), bg="#f4f6f9", fg="#ff9800").pack(pady=5, anchor="w")
         
+        # Sắp xếp toàn bộ danh sách kết quả bằng thuật toán bubble_sort có sẵn của ông
         sorted_list = bubble_sort(self.controller.results_db, key=lambda x: x.get("score", 0))
         
-        columns = ("rank", "exam_id", "user", "sub", "score", "time")
-        tree = ttk.Treeview(container, columns=columns, show="headings")
-        tree.heading("rank", text="Hạng"); tree.heading("exam_id", text="Mã Ca Thi")
-        tree.heading("user", text="Tên Thí Sinh"); tree.heading("sub", text="Môn Thi")
-        tree.heading("score", text="Điểm Số"); tree.heading("time", text="Thời Gian")
+        # Khởi tạo thanh Tab (Notebook) để phân tách các môn học
+        leaderboard_notebook = ttk.Notebook(container)
+        leaderboard_notebook.pack(fill="both", expand=True, pady=10)
         
-        tree.column("rank", width=50, anchor="center")
-        tree.column("exam_id", width=90, anchor="center")
-        tree.column("score", width=80, anchor="center")
-        tree.column("time", width=110, anchor="center")
-        tree.pack(fill="both", expand=True, pady=10)
+        # Định nghĩa cấu hình cho 3 môn học (Khớp chính xác chuỗi text lưu trong JSON)
+        subjects_config = [
+            {"tab_title": "  Môn Toán (Math)  ", "json_name": "Math"},
+            {"tab_title": "  Môn Tiếng Anh (English)  ", "json_name": "English"},
+            {"tab_title": "  Môn Ngữ Văn (Vietnamese)  ", "json_name": "Vietnamese "}
+        ]
         
-        for rank, item in enumerate(sorted_list, 1):
-            tree.insert("", "end", values=(rank, item.get("exam_id"), item.get("username"), item.get("subject"), f"{item.get('score')} / 10", f"{item.get('userTime')} giây"))
+        columns = ("rank", "exam_id", "user", "score", "time")
+        
+        # Vòng lặp tự động dựng giao diện bảng cho từng môn
+        for sub_item in subjects_config:
+            tab_frame = tk.Frame(leaderboard_notebook, bg="white")
+            leaderboard_notebook.add(tab_frame, text=sub_item["tab_title"])
             
-        tk.Button(container, text="Quay Về Menu Cấu Hình", bg="#555", fg="white", font=("Helvetica", 10, "bold"), padx=15, command=self.render_start_frame, relief="flat").pack(anchor="e")
+            # Tạo Treeview riêng cho Tab của môn này
+            tree = ttk.Treeview(tab_frame, columns=columns, show="headings")
+            tree.heading("rank", text="Hạng")
+            tree.heading("exam_id", text="Mã Ca Thi")
+            tree.heading("user", text="Tên Thí Sinh")
+            tree.heading("score", text="Điểm Số")
+            tree.heading("time", text="Thời Gian làm")
+            
+            tree.column("rank", width=60, anchor="center")
+            tree.column("exam_id", width=100, anchor="center")
+            tree.column("score", width=100, anchor="center")
+            tree.column("time", width=120, anchor="center")
+            tree.pack(fill="both", expand=True, padx=5, pady=5)
+            
+            # Lọc dữ liệu kết quả thi và đổ vào bảng tương ứng của từng môn
+            rank_counter = 1
+            for item in sorted_list:
+                # Ép kiểu chuỗi về chữ thường và xóa khoảng trắng để lọc chính xác tuyệt đối
+                if item.get("subject", "").strip().lower() == sub_item["json_name"].strip().lower():
+                    tree.insert(
+                        "", "end", 
+                        values=(
+                            rank_counter, 
+                            item.get("exam_id"), 
+                            item.get("username"), 
+                            f"{item.get('score')} / 10", 
+                            f"{item.get('userTime')} giây"
+                        )
+                    )
+                    rank_counter += 1
+                    
+        # Nút quay về giao diện cấu hình ban đầu
+        tk.Button(container, text="🏠 Quay Về Màn Hình Chính", bg="#555", fg="white", font=("Helvetica", 10, "bold"), padx=15, pady=6, command=self.render_start_frame, relief="flat", cursor="hand2").pack(anchor="e", pady=5)

@@ -34,21 +34,3 @@ def updateData(filepath, new_item):
     data.append(new_item)
     saveData(filepath, data)
     return True
-
-def updateComment(filepath, exam_id, comment):
-    data = loadData(filepath)
-    is_updated = False
-    
-    # Duyệt qua mảng kết quả để tìm đúng bài thi
-    for item in data:
-        if item.get("exam_id") == exam_id:
-            item["status"] = "graded"  # Cập nhật trạng thái thành 'đã chấm'
-            is_updated = True
-            break  # nếu tìm thấy thì thoát vòng lặp
-            
-    # Nếu tìm thấy và sửa thành công thì mới lưu vào ổ cứng
-    if is_updated:
-        saveData(filepath, data)
-        return True
-        
-    return False # Trả về False nếu không tìm thấy exam_id
