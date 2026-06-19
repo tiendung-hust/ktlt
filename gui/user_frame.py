@@ -17,7 +17,6 @@ class UserFrame(tk.Frame):
 
     def clean_screen(self):
         for widget in self.winfo_children(): widget.destroy()
-
     def render_start_frame(self):
         self.clean_screen()
         self.exam_timer_running = False
@@ -36,7 +35,7 @@ class UserFrame(tk.Frame):
         tk.Label(config_box, text="CẤU HÌNH THÔNG SỐ ĐỀ THI", font=("Helvetica", 12, "bold"), bg="white", fg="#1a73e8").pack(pady=10, anchor="w")
         
         tk.Label(config_box, text="Chọn môn học cần kiểm tra:", bg="white").pack(anchor="w", pady=2)
-        # Giữ nguyên khoảng trắng chữ Vietnamese để đồng bộ với questions.json của bạn
+
         self.cbo_subj = ttk.Combobox(config_box, values=["Math", "English", "Vietnamese "], state="readonly", font=("Helvetica", 10))
         self.cbo_subj.pack(fill="x", pady=4); self.cbo_subj.set("Math")
         
@@ -160,35 +159,6 @@ class UserFrame(tk.Frame):
         # Ép buộc Tkinter cập nhật lại kích thước nội dung ngay lập tức để tính toán thanh cuộn
         self.update_idletasks()
         canvas.configure(scrollregion=canvas.bbox("all"))
-        
-        self.seconds_remaining = duration_mins * 60
-        self.exam_start_time = time.time()
-        self.exam_timer_running = True
-        self.countdown_tick_logic()
-        
-        def _on_mousewheel(event):
-            # Kiểm tra xem widget canvas có còn tồn tại không trước khi gọi lệnh cuộn
-            if canvas.winfo_exists():
-                canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
-
-        # Chỉ lắng nghe cuộn chuột KHI con trỏ chuột nằm bên trong vùng của Canvas
-        canvas.bind("<MouseWheel>", _on_mousewheel)
-        
-        self.radio_variables = []
-        for idx, q in enumerate(self.active_exam_data["questions"]):
-            q_box = tk.Frame(scroll_content, bg="white", bd=1, relief="groove", padx=15, pady=12)
-            q_box.pack(fill="x", pady=8)
-            
-            tk.Label(q_box, text=f"Câu {idx + 1}: {q['text']} [{q['difficulty']}]", font=("Helvetica", 11, "bold"), bg="white", justify="left", anchor="w", wraplength=720).pack(anchor="w", pady=4)
-            
-            var = tk.StringVar(value="None")
-            self.radio_variables.append(var)
-            
-            for label, choice_text in q["answers"].items():
-                tk.Radiobutton(q_box, text=f"{label}. {choice_text}", variable=var, value=label, font=("Helvetica", 10), bg="white", fg="#202124", activebackground="white").pack(anchor="w", padx=20, pady=2)
-                
-        btn_finish = tk.Button(scroll_content, text="HOÀN THÀNH & NỘP BÀI THI", font=("Helvetica", 11, "bold"), bg="#1a73e8", fg="white", padx=40, pady=10, relief="flat", command=self.handle_manual_submit, cursor="hand2")
-        btn_finish.pack(pady=30)
         
         self.seconds_remaining = duration_mins * 60
         self.exam_start_time = time.time()
