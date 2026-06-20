@@ -26,11 +26,16 @@ def shuffle(arr, seed):
 
 #Hàm sắp xếp theo điểm từ kết quả thi, key là score, nhận dữ liệu từ results.json
 def bubble_sort(arr, key):
-    n=len(arr)
+    n = len(arr)
     #Sao chép để bảo vệ dữ liệu mảng gốc
-    sorted_arr=list(arr)
+    sorted_arr = list(arr)
     for i in range(n):
+        swapped = False
         for j in range(n-i-1):
-            if key(sorted_arr[j])<key(sorted_arr[j+1]):
-                sorted_arr[j],sorted_arr[j+1]=sorted_arr[j+1],sorted_arr[j]
+            if key(sorted_arr[j]) < key(sorted_arr[j+1]):
+                sorted_arr[j], sorted_arr[j+1] = sorted_arr[j+1], sorted_arr[j]
+                swapped = True
+        #Gắn cờ để thoát khỏi vòng lặp nếu mảng đã được sắp xếp
+        if not swapped:
+            break
     return sorted_arr
