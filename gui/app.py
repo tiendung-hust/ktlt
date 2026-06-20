@@ -18,7 +18,7 @@ class QuizApplication(tk.Tk):
             with open(datahand.RESULTS_FILE, "w", encoding="utf-8") as f:
                 json.dump([], f)
 
-        # Nạp dữ liệu toàn cục thông qua module datahand sẵn có của bạn
+        # Nạp dữ liệu toàn cục thông qua module datahand sẵn có
         self.bank = datahand.loadData(datahand.QUESTIONS_FILE)
         self.results_db = datahand.loadData(datahand.RESULTS_FILE)
         

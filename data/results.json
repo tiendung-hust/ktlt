@@ -1,0 +1,19 @@
+[
+{
+                "exam_id": "EXAM_1",
+                "username": "hocsinh_A",
+                "subject": "Math",
+                "score": 5.0,
+                "correct_count": 1,
+                "total": 2,
+                "userTime": 45,
+                "uncorrect": [
+                    {
+                        "question": "Tính 13 + 9.",
+                        "user_choice": "B",
+                        "correct_label": "A",
+                        "correct_text": "22"
+                    }
+                ]
+            }
+        ]
