@@ -1,269 +1,287 @@
-# KẾ HOẠCH DỰ ÁN
-## Hệ thống thi trắc nghiệm
+# Hệ thống thi trắc nghiệm
+
+**Đồ án cuối kỳ — Môn Kĩ thuật lập trình (MI3310) — Đại học Bách khoa Hà Nội**
+
+Nhóm 12 — Chủ đề 5: Hệ thống thi trắc nghiệm
+Giảng viên hướng dẫn: Vũ Thành Nam
+
+| Họ và tên |
+|---|
+| Dương Tiến Dũng|
+| Phan Tiến Hưng |
 
 ---
-
-**Nhóm 12:** Dương Tiến Dũng và Phan Tiến Hưng  
-
-**Trường:** Đại học Bách Khoa Hà Nội
 
 ## Mục lục
-* [1.Tổng quan dự án](#tổng-quan-dự-án)
-* [2.Yêu cầu nộp bài](#yêu-cầu-nộp-bài)
-* [3.Phân công nhóm](#phân-công-nhóm)
-* [4.Phân tích bài toán](#phân-tích-bài-toán)
-* [5.Thiết kế hệ thống](#thiết-kế-hệ-thống)
-* [6.Thuật Toán](#thuật-toán)
-* [7.Kiểm thử và đo hiệu năng](#kiểm-thử-và-đo-hiệu-năng)
-* [8.Cấu trúc báo cáo](#cấu-trúc-báo-cáo)
----
-## 1.Tổng quan dự án:
-**Ngôn ngữ lựa chọn:** Python.
-### 1.1 Mô tả bài toán: 
 
-Hệ thống hỗ trợ quản lý ngân hàng câu hỏi, tự động tạo đề thi theo ma trận độ khó và chấm điểm, phân tích lỗi sai chi tiết. Giải pháp tối ưu cho việc ôn luyện và kiểm tra kiến thức trắc nghiệm.
-
-### 1.2 Mục tiêu:
- 
-* Tự động hóa quy trình thi: Xây dựng một hệ thống khép kín từ việc tạo đề thi tự động đến chấm điểm, giúp tiết kiệm thời gian và giảm thiểu sai sót so với việc chấm thủ công.
-
-* Đảm bảo tính công bằng: Thiết kế cơ chế xáo trộn đáp án thông minh và ngẫu nhiên hóa thứ tự câu hỏi, đảm bảo mỗi người thi có một đề thi duy nhất, hạn chế tối đa gian lận.
-
-* Quản lý khoa học: Tổ chức ngân hàng câu hỏi theo ma trận độ khó (Dễ, Trung bình, Khó) và chủ đề, cho phép người dùng tùy chỉnh cấu trúc đề thi linh hoạt theo nhu cầu ôn luyện.
-
-* Phản hồi tức thì: Cung cấp kết quả chấm điểm ngay lập tức kèm theo bảng phân tích lỗi sai, giúp người dùng nhận diện lỗ hổng kiến thức và cải thiện hiệu quả học tập.
+* [1. Giới thiệu](#1-giới-thiệu)
+* [2. Yêu cầu hệ thống](#2-yêu-cầu-hệ-thống)
+* [3. Cài đặt và chạy chương trình](#3-cài-đặt-và-chạy-chương-trình)
+* [4. Cấu trúc thư mục dự án](#4-cấu-trúc-thư-mục-dự-án)
+* [5. Tài khoản sử dụng](#5-tài-khoản-sử-dụng)
+* [6. Các thuật toán tự cài đặt](#6-các-thuật-toán-tự-cài-đặt)
+* [7. Cấu trúc dữ liệu lưu trữ](#7-cấu-trúc-dữ-liệu-lưu-trữ)
+* [8. Kiểm thử và đo hiệu năng](#8-kiểm-thử-và-đo-hiệu-năng)
+* [9. Phân công nhiệm vụ](#9-phân-công-nhiệm-vụ)
+* [10. Tài liệu báo cáo](#10-tài-liệu-báo-cáo)
 
 ---
 
-## 2.Yêu cầu nộp bài
+## 1. Giới thiệu
 
-### 2.1. Yêu cầu kỹ thuật cốt lõi
-- **Tự cài đặt cấu trúc dữ liệu:** Không được sử dụng các cấu trúc dữ liệu nâng cao hoặc thư viện có sẵn (ví dụ: `list`, `hash`, `queue`, thư viện ma trận, thư viện số lớn, các thư viện sắp xếp/tìm kiếm tích hợp sẵn).
-- **Yêu cầu:** Phải tự cài đặt thủ công toàn bộ các cấu trúc dữ liệu và thuật toán được sử dụng trong chương trình.
+Hệ thống thi trắc nghiệm độc lập, chạy trên máy tính cá nhân, không phụ thuộc máy chủ hay
+hệ quản trị cơ sở dữ liệu, được xây dựng bằng Python theo kiến trúc lập trình thủ tục và
+module hóa, hướng tới quy mô đánh giá nội bộ (lớp học, ôn luyện cá nhân).
 
-### 2.2. Yêu cầu chung của chương trình
-- **Menu điều khiển:** Người dùng chọn tác vụ từ menu đơn giản để thực hiện các chức năng cho đến khi chọn kết thúc chương trình.
-- **Lưu trữ dữ liệu:** Dữ liệu vào/ra phải được lưu trữ trong file văn bản (định dạng gợi ý: JSON, XML, hoặc lưu theo dòng). Cho phép nhập liệu từ bàn phím và xuất dữ liệu xuống file.
-- **Kỹ thuật lập trình:** Vận dụng đúng các kỹ thuật thiết kế, lập trình và kiểm thử phần mềm.
+Hệ thống cho phép:
+- Nạp ngân hàng câu hỏi động từ tệp dữ liệu, tự sinh đề thi theo môn học, số lượng câu và
+  ma trận tỉ lệ độ khó (Dễ / Vừa / Khó) do người dùng cấu hình.
+- Xáo trộn ngẫu nhiên thứ tự câu hỏi và vị trí đáp án cho mỗi lượt thi.
+- Đếm ngược thời gian làm bài, tự động nộp bài khi hết giờ.
+- Chấm điểm tức thì, phân tích chi tiết các câu trả lời sai.
+- Lưu lịch sử thi, hiển thị bảng xếp hạng theo từng môn học.
+- Cho phép giáo viên thêm câu hỏi mới vào ngân hàng và xem chi tiết kết quả/lỗi sai của
+  từng ca thi.
 
-### 2.3. Yêu cầu kết quả nộp bài
-Kết quả nộp bài bao gồm 2 thành phần chính:
-
-### (1) File Báo cáo (định dạng Word)
-Báo cáo cần tuân thủ thể thức của Đại học và bao gồm các thông tin:
-- **a.** Thông tin người thực hiện, phân công nhiệm vụ (nếu là nhóm).
-- **b.** Mô tả tổng thể các chức năng, thiết kế/tổ chức chương trình và cấu trúc file dữ liệu.
-- **c.** Các tình huống kiểm thử (Test cases) và kết quả thực hiện (kèm hình ảnh minh họa).
-- **d.** Tổng kết các kỹ thuật đã vận dụng.
-- **e.** Phụ lục: Mã nguồn hàm `main` và mô tả các hàm xử lý nghiệp vụ chính.
-
-### (2) File nén (.zip hoặc .rar)
-Chứa toàn bộ mã nguồn của chương trình:
-- **a.** Thư mục chứa các file mã nguồn.
-- **b.** Các file dữ liệu phục vụ chương trình.
-
-*Lưu ý: Cần chuẩn bị báo cáo in để nộp và ký danh sách thi theo quy định.*
+**Ràng buộc kỹ thuật cốt lõi của đề tài:** không sử dụng các hàm dựng sẵn của Python cho
+xáo trộn và sắp xếp (`random.shuffle()`, `sorted()`, `list.sort()`...). Toàn bộ bộ sinh số
+giả ngẫu nhiên, thuật toán xáo trộn và thuật toán sắp xếp đều được tự cài đặt thủ công
+trong `core/algorithms.py`.
 
 ---
 
-## 3.Phân công nhóm 
+## 2. Yêu cầu hệ thống
 
-### 3.1 Thành viên 1: Logic lõi 
-Trọng tâm là xử lý mảng và từ điển bằng code tay:
-- **`core/algorithms.py`**:
-    - `randomLCG`: Class sinh số ngẫu nhiên thủ công (Linear Congruential Generator).
-    - `shuffle(arr)`: Thuật toán Fisher-Yates để xáo trộn câu hỏi và đáp án.
-    - `bubbleSort(arr, key)`: Thuật toán sắp xếp danh sách thi giảm dần theo điểm số (`score`).
-- **`core/exam.py`**:
-    - `exam`: Lọc câu hỏi theo môn/độ khó, bốc câu hỏi ngẫu nhiên và xáo trộn đáp án.
-    - `results`: Chấm điểm tự động và trả về dữ liệu đối chiếu lỗi sai cho Dashboard.
-
-### 3.2 Thành viên 2: Giao diện & Dữ liệu 
-Trọng tâm là xây dựng GUI và quản lý trạng thái:
-- **`gui/datahand.py`**: 
-    - `loaddata` / `savedata`: Xử lý nạp và lưu trữ file dữ liệu.
-    - `save_result()`: Ghi lịch sử thi vào `results.json` sau mỗi lần nộp bài.
-- **`gui/app.py`**: 
-    - **Cấu trúc GUI**: Sử dụng kỹ thuật ẩn/hiện `Frame` của tkinter gồm 4 màn hình: Start Screen, Exam Screen (với `Canvas` + `Scrollbar`), Dashboard (Result Screen), và Leaderboard (dùng `Treeview`).
-    - **Thời gian**: Sử dụng `root.after(1000, update_timer)` để đếm ngược và tự động nộp bài khi hết giờ.
+- Python **3.8 trở lên** (khuyến nghị 3.10+).
+- Thư viện `tkinter` — đi kèm sẵn trong bản cài đặt Python tiêu chuẩn trên Windows/macOS.
+  Trên một số bản phân phối Linux cần cài thêm thủ công:
+  ```bash
+  sudo apt install python3-tk
+  ```
+- Toàn bộ phần còn lại chỉ dùng thư viện chuẩn của Python (`json`, `os`, `time`, `unittest`)
+  — **không cần cài thêm package nào khác** để chạy chương trình chính.
+- Để vẽ lại biểu đồ hiệu năng (tùy chọn, không bắt buộc để chạy ứng dụng):
+  ```bash
+  pip install matplotlib
+  ```
 
 ---
 
-## 4.Phân tích bài toán 
+## 3. Cài đặt và chạy chương trình
 
-### 4.1.Đầu vào (Input) và Đầu ra (Output)
+```bash
+# 1. Clone hoặc giải nén mã nguồn, sau đó di chuyển vào thư mục gốc của dự án
+cd ktlt-main
 
-* Đầu vào:
-- **Ngân hàng câu hỏi:** File `questions.json` chứa danh sách câu hỏi, bao gồm: nội dung, 4 đáp án, đáp án đúng và phân loại độ khó (Dễ/Vừa/Khó).
-- **Cấu hình kỳ thi:** Người dùng chọn Môn học, Thời gian làm bài và số lượng câu hỏi thông qua giao diện.
-- **Bài làm của thí sinh:** Danh sách đáp án người dùng chọn trong quá trình làm bài.
-
-* Đầu ra:
-- **Đề thi:** Một danh sách câu hỏi đã được xáo trộn thứ tự và xáo trộn đáp án.
-- **Kết quả chi tiết:** Tổng điểm (thang 10), danh sách câu trả lời đúng/sai và thời gian hoàn thành.
-- **Phân tích:** Bảng đối chiếu lỗi sai (hiển thị câu trả lời của người dùng so với đáp án đúng).
-- **Lịch sử thi:** Lưu trữ kết quả vào `results.json` để phục vụ chức năng bảng xếp hạng.
-
-
-### 4.2.Cấu trúc dữ liệu
-
-| Cấu trúc | Mục đích | Lý do chọn |
-| :--- | :--- | :--- |
-| **Dictionary/JSON** | Lưu trữ ngân hàng câu hỏi | Truy xuất nhanh theo khóa, cấu trúc linh hoạt |
-| **List (Tự cài đặt)** | Quản lý danh sách câu hỏi trong đề | Lưu trữ tuần tự, dễ dàng duyệt và thao tác |
-| **Fisher-Yates (Shuffle)** | Xáo trộn thứ tự câu hỏi và đáp án | Đảm bảo tính ngẫu nhiên $O(n)$ không dùng thư viện |
-| **Bubble Sort** | Sắp xếp lịch sử thi (Bảng xếp hạng) | Cài đặt thủ công, trực quan trong quy mô dữ liệu nhỏ |
-| **Dictionary** | Lưu trữ kết quả thi (`results.json`) | Dễ dàng ánh xạ thông tin người dùng với điểm số |
-
----
-
-## 5.Thiết kế hệ thống 
-### 5.1.Thiết kế Diagram
-```text
-+-----------------------+    +-----------------------+
-|      Question         |    |      ExamEngine       |
-+-----------------------+    +-----------------------+
-| - id: int             |    | - bank: list          |
-| - diff_matrix: dict   |    | - diff: str           |
-| - subject: str        |    | + exam()              |
-| - correct: str        |    | + results()           |
-+-----------------------+    +-----------------------+
-           
-           
-+-----------------------+    +-----------------------+
-|      Algorithms       |    |      DataHandler      |
-+-----------------------+    +-----------------------+
-| + randomLCG(seed)     |    | + loadData()          |
-| + shuffle(arr)        |    | + saveData()          |
-| + bubbleSort(arr, key)|    | + saveResult()        |
-+-----------------------+    +-----------------------+
-           
-           
-+-----------------------+
-|        AppGUI         |
-+-----------------------+
-| - current_frame       |
-| + showMenu()          |
-| + startTimer()        |
-| + updateDisplay()     |
-+-----------------------+
+# 2. Chạy chương trình từ thư mục gốc (bắt buộc, vì các đường dẫn dữ liệu
+#    trong core/datahand.py là đường dẫn tương đối "data/...")
+python main.py
 ```
-### 5.2.Format dữ liệu(JSON)
-```text
+
+Khi khởi động lần đầu, hệ thống tự động:
+- Nạp ngân hàng câu hỏi từ `data/questions.json`.
+- Khởi tạo `data/results.json` thành mảng rỗng `[]` nếu tệp chưa tồn tại hoặc trống.
+
+> **Lưu ý:** luôn chạy lệnh `python main.py` khi terminal đang đứng tại thư mục gốc của dự
+> án (ngang hàng với `main.py`, `core/`, `gui/`, `data/`). Nếu chạy từ một thư mục khác,
+> chương trình sẽ không tìm thấy `data/questions.json`.
+
+---
+
+## 4. Cấu trúc thư mục dự án
+
+```
+ktlt-main/
+├── main.py                      # Điểm khởi chạy duy nhất của chương trình
+├── core/                        # Tầng lõi: thuật toán + xử lý nghiệp vụ + I/O dữ liệu
+│   ├── algorithms.py            #   randomLCG, shuffle(), bubble_sort()
+│   ├── exam.py                  #   exam() — sinh đề thi | results() — chấm điểm
+│   └── datahand.py              #   loadData() / saveData() / updateData()
+├── gui/                         # Tầng giao diện (Tkinter)
+│   ├── app.py                   #   QuizApplication — controller trung tâm, điều hướng Frame
+│   ├── login_frame.py           #   Màn hình đăng nhập, phân quyền Admin/User
+│   ├── admin_frame.py           #   Giao diện Giáo viên: thêm câu hỏi, xem kết quả thi
+│   └── user_frame.py            #   Giao diện Học sinh: cấu hình đề, làm bài, lịch sử, BXH
+├── data/
+│   ├── questions.json           #   Ngân hàng câu hỏi (450 câu: Toán / Tiếng Anh / Ngữ Văn)
+│   └── results.json             #   Lịch sử các ca thi đã diễn ra
+├── testcase.py                  # Bộ 12 unit test (unittest), bao phủ core + gui
+├── test_report_log.txt          # Log kết quả lần chạy testcase.py gần nhất
+└── test/                        # Script đo và vẽ biểu đồ hiệu năng (Chương 8 báo cáo)
+    ├── benchmark_chuong8.py      #   Đo Bubble Sort trước/sau khi thêm cờ swapped
+    ├── plot_chuong8.py           #   Vẽ 4 biểu đồ từ kết quả benchmark
+    ├── benchmark_chuong8_results.csv
+    ├── chart_*.png                #   4 biểu đồ đã xuất sẵn, dùng trong báo cáo
+    └── HUONG_DAN_CHAY.md          #   Hướng dẫn chạy chi tiết riêng cho thư mục test/
+```
+
+**Nguyên tắc kiến trúc:** chiều phụ thuộc một chiều — `gui/` được phép `import` từ `core/`,
+nhưng không có chiều ngược lại. `core/algorithms.py` hoàn toàn độc lập, không phụ thuộc bất
+kỳ module nghiệp vụ hay giao diện nào.
+
+---
+
+## 5. Tài khoản sử dụng
+
+Hệ thống không có màn hình đăng ký; phân quyền dựa hoàn toàn vào tên đăng nhập gõ ở màn
+hình Login (`gui/login_frame.py`):
+
+| Vai trò | Cách đăng nhập | Ghi chú |
+|---|---|---|
+| **Học sinh** | Gõ bất kỳ tên nào khác `admin`, không cần mật khẩu | Vào thẳng `UserFrame` |
+| **Giáo viên (Admin)** | Gõ `admin` ở ô Username → ô mật khẩu tự hiện ra → nhập mật khẩu | Mật khẩu mặc định: `123456` |
+
+---
+
+## 6. Các thuật toán tự cài đặt
+
+Toàn bộ nằm trong `core/algorithms.py`, không sử dụng thư viện `random` hay hàm sắp xếp
+dựng sẵn của Python:
+
+### 6.1. Bộ sinh số giả ngẫu nhiên — `class randomLCG`
+
+Cài đặt theo phương pháp đồng dư tuyến tính (Linear Congruential Generator), dùng bộ hệ
+số của *Numerical Recipes*: `a = 1664525`, `c = 1013904223`, `m = 2^32`. Bộ hệ số này thỏa
+mãn định lý Hull–Dobell, đảm bảo chu kỳ đầy đủ m = 2^32 với mọi giá trị `seed` khởi tạo.
+
+```python
+rdm = randomLCG(seed)
+rdm.next(low, high)   # trả về số nguyên ngẫu nhiên trong [low, high)
+```
+
+### 6.2. Thuật toán xáo trộn — `shuffle(arr, seed)`
+
+Cài đặt thuật toán Fisher-Yates, duyệt mảng từ cuối về đầu, đảm bảo phân bố đều trên mọi
+hoán vị có thể. Hàm sao chép mảng đầu vào (`list(arr)`) trước khi xáo trộn để không làm
+thay đổi dữ liệu gốc. Độ phức tạp: O(n) thời gian, O(n) không gian.
+
+Trong `core/exam.py`, hàm `exam()` gọi `shuffle()` ba lần với ba mục đích khác nhau: xáo
+trộn câu hỏi đã lọc theo từng mức độ khó, xáo trộn lại toàn bộ đề sau khi gộp đủ câu, và
+xáo trộn vị trí 4 phương án trả lời của từng câu hỏi.
+
+### 6.3. Thuật toán sắp xếp — `bubble_sort(arr, key)`
+
+Cài đặt Bubble Sort sắp xếp giảm dần, có bổ sung cờ `swapped` để dừng sớm khi mảng đã ở
+trạng thái sắp xếp. Tham số `key` là một hàm callback (tương tự đối số `key` của
+`sorted()`), cho phép sắp xếp theo bất kỳ tiêu chí nào mà không cần sửa logic bên trong hàm.
+Trong hệ thống, hàm này được gọi để sắp xếp bảng xếp hạng theo điểm số:
+
+```python
+bubble_sort(results_db, key=lambda x: x.get("score", 0))
+```
+
+Độ phức tạp: O(n) ở trường hợp tốt nhất (dữ liệu đã sắp sẵn), O(n²) ở trường hợp trung
+bình/xấu nhất. Số liệu đo thực nghiệm chi tiết — xem [mục 8](#8-kiểm-thử-và-đo-hiệu-năng).
+
+---
+
+## 7. Cấu trúc dữ liệu lưu trữ
+
+Hệ thống dùng tệp tin phẳng JSON làm lớp lưu trữ, không dùng hệ quản trị cơ sở dữ liệu.
+
+### `data/questions.json` — Ngân hàng câu hỏi (450 câu)
+
+```json
 {
-    "id": 1,
-    "subject": "Toan",
-    "difficulty": "Easy",
-    "text": "Tính 12 + 8.",
-    "answers": {
-      "A": "20",
-      "B": "21",
-      "C": "19",
-      "D": "22"
-    },
-    "correct_label": "A"
-  }
+  "id": 1,
+  "subject": "Math",
+  "difficulty": "Easy",
+  "text": "Tinh 12 + 8.",
+  "answers": { "A": "20", "B": "21", "C": "19", "D": "22" },
+  "correct_label": "A"
+}
 ```
----
 
-## 6.Thuật toán
+Phân bố: 3 môn học (`Math`, `English`, `Vietnamese`) × 150 câu/môn, mỗi môn gồm 80 câu
+Easy, 45 câu Medium, 25 câu Hard.
 
-### 6.1.Peseudocode
-```text
-CLASS randomLCG:
-    FUNCTION initialize(seed):
-        state = seed, a = 1664525, c = 1013904223, m = 2^32
-    FUNCTION next(low, high):
-        state = (a * state + c) MOD m
-        RETURN low + (state MOD (high - low))
+### `data/results.json` — Lịch sử thi (cơ chế append-only)
 
-FUNCTION shuffle(arr, seed):
-    rdm = NEW randomLCG(seed)
-    shuffled = COPY(arr)
-    FOR i FROM LENGTH(shuffled) - 1 DOWN TO 1:
-        j = rdm.next(0, i + 1)
-        SWAP shuffled[i] WITH shuffled[j]
-    RETURN shuffled
-
-FUNCTION bubbleSort(arr, key):
-    sorted_arr = COPY(arr)
-    FOR i FROM 0 TO LENGTH(sorted_arr) - 1:
-        FOR j FROM 0 TO LENGTH(sorted_arr) - i - 2:
-            IF key(sorted_arr[j]) < key(sorted_arr[j+1]):
-                SWAP sorted_arr[j] WITH sorted_arr[j+1]
-    RETURN sorted_arr
-
-FUNCTION exam(dur_time, bank, count, subj, diff_matrix):
-    seed = GET_CURRENT_TIME_MILLISECONDS()
-    ex_ques = []
-    
-    // 1. Lọc và chọn câu hỏi theo tỉ lệ độ khó
-    FOR EACH (difficulty, ratio) IN diff_matrix:
-        num_to_get = INTEGER(count * ratio)
-        filtered = FILTER bank WHERE subject == subj AND difficulty == difficulty
-        shuffled_filtered = CALL shuffle(filtered, seed)
-        APPEND first num_to_get elements OF shuffled_filtered TO ex_ques
-    
-    // 2. Xáo trộn thứ tự đề thi cuối cùng
-    final_exam = CALL shuffle(ex_ques, seed)
-    
-    // 3. Xáo trộn vị trí đáp án cho từng câu
-    FOR EACH question IN final_exam:
-        correct_text = question.answers[question.correct_label]
-        shuffled_answers = CALL shuffle(LIST(question.answers.values()), seed)
-        
-        NEW new_answers_map = {}
-        FOR i FROM 0 TO LENGTH(question.answers):
-            new_answers_map[original_labels[i]] = shuffled_answers[i]
-        
-        question.answers = new_answers_map
-        // Cập nhật lại nhãn đáp án đúng mới
-        question.correct_label = FIND_KEY(question.answers, correct_text)
-        
-    RETURN {data: config, questions: final_exam}
-
-FUNCTION results(user_answers, exam_data, userTime):
-    correct_count = 0
-    uncorrect_list = []
-    
-    FOR i FROM 0 TO LENGTH(exam_data.questions) - 1:
-        user_choice = (i < LENGTH(user_answers)) ? user_answers[i] : NULL
-        correct_label = exam_data.questions[i].correct_label
-        
-        IF user_choice == correct_label:
-            correct_count = correct_count + 1
-        ELSE:
-            APPEND {question, user_choice, correct_label} TO uncorrect_list
-            
-    score = (correct_count / LENGTH(exam_data.questions)) * 10
-    RETURN {score, correct_count, total, userTime, uncorrect_list}
+```json
+{
+  "exam_id": "EXAM_1",
+  "username": "hocsinh_A",
+  "subject": "Math",
+  "score": 5.0,
+  "correct_count": 1,
+  "total": 2,
+  "userTime": 45,
+  "uncorrect": [
+    {
+      "question": "Tính 13 + 9.",
+      "user_choice": "B",
+      "correct_label": "A",
+      "correct_text": "22"
+    }
+  ]
+}
 ```
-###  6.2.Phân tích độ phức tạp thuật toán
 
-| Thuật toán | Thời gian (Time) | Không gian (Space) |
-| :--- | :--- | :--- |
-| **Fisher-Yates Shuffle** | $O(N)$ | $O(N)$ |
-| **Bubble Sort** | $O(N^2)$ | $O(N)$ |
-| **`generate_exam`** | $O(N + M)$ | $O(M)$ |
-*(Với N: tổng số câu hỏi trong ngân hàng, M: số câu hỏi trong một đề thi)*
+### Module đọc/ghi — `core/datahand.py`
 
----
-
-## 7.Kiểm thử và đo hiệu năng
-
+| Hàm | Vai trò |
+|---|---|
+| `loadData(filepath)` | Nạp tệp JSON lên RAM; trả về `[]` nếu tệp không tồn tại hoặc lỗi cú pháp (`json.JSONDecodeError`), không làm sập chương trình |
+| `saveData(filepath, data)` | Ghi đè toàn bộ mảng dữ liệu xuống đĩa (`ensure_ascii=False`, `indent=4`, bảo toàn Unicode tiếng Việt) |
+| `updateData(filepath, new_item)` | Nạp dữ liệu cũ → tự sinh `id` tăng dần (nếu là `questions.json`, dùng `max(id) + 1`) → thêm bản ghi mới → ghi đè xuống đĩa |
 
 ---
 
-## 8.Cấu trúc báo cáo
+## 8. Kiểm thử và đo hiệu năng
 
-File báo cáo (word), thể thức (font chữ, trình bày) tham khảo mẫu đồ án của Đại học. Một số thông tin cần có: 
+### 8.1. Chạy bộ unit test (`testcase.py`)
 
-thông tin người thực hiện, phân công (nếu là nhóm) 
+```bash
+python testcase.py
+```
 
-* Mô tả tổng thể chức năng, cách thiết kế/tổ chức chương trình, file dữ liệu 
+Bộ test gồm **12 kịch bản** (`unittest`), dùng dữ liệu giả lập riêng (không đụng đến
+`data/questions.json` và `data/results.json` thật), bao phủ:
 
-* Tình huống kiểm thử, kết quả thực hiện (hình ảnh chụp kết quả)  
+- Đăng nhập & phân quyền (4 test)
+- Sinh đề thi & cấu hình ma trận độ khó (2 test)
+- Làm bài, chấm điểm, đồng hồ đếm ngược (2 test)
+- Quản lý dữ liệu: lịch sử thi, thêm câu hỏi, phân tích lỗi sai (4 test)
 
-* Tổng kết các kỹ thuật đã vận dụng 
+Kết quả được in ra console đồng thời ghi vào `test_report_log.txt`. Trên môi trường không
+có màn hình đồ họa (server, CI/CD, WSL chưa cấu hình GUI), cần chạy qua Xvfb:
 
-* Phụ lục code hàm main, các mô tả hàm xử lý tác nghiệp chính
+```bash
+sudo apt install xvfb
+xvfb-run -a python3 testcase.py
+```
+
+### 8.2. Đo hiệu năng Bubble Sort trước/sau tối ưu
+
+```bash
+cd test
+python benchmark_chuong8.py     # đo và xuất benchmark_chuong8_results.csv
+pip install matplotlib          # nếu chưa cài
+python plot_chuong8.py          # vẽ lại 4 biểu đồ PNG từ file CSV
+```
+
+Script benchmark tự định nghĩa lại hai phiên bản `bubble_sort` (trước và sau khi thêm cờ
+`swapped`), đo trên 5 mốc kích thước dữ liệu (N = 100, 500, 1.000, 5.000, 10.000) ở hai
+kịch bản dữ liệu ngẫu nhiên và đã sắp sẵn. Chi tiết phương pháp đo và phân tích kết quả —
+xem Chương 8 trong báo cáo, hoặc `test/HUONG_DAN_CHAY.md`.
+
+---
+
+## 9. Phân công nhiệm vụ
+
+| Thành viên | Nhiệm vụ | Mức độ hoàn thành |
+|---|---|---|
+| **Dương Tiến Dũng** | Lập trình tầng lõi (`core/`: thuật toán, xử lý dữ liệu, logic nghiệp vụ); viết báo cáo; chuẩn bị ngân hàng câu hỏi; viết README; đo đạc hiệu năng | 100% |
+| **Phan Tiến Hưng** | Lập trình giao diện (`gui/`); viết test case (`testcase.py`); chuẩn bị nội dung báo cáo phần kiểm thử | 100% |
+
+---
+
+## 10. Tài liệu báo cáo
+
+Báo cáo đầy đủ (phân tích yêu cầu, thiết kế kiến trúc, mô tả thuật toán, kiểm thử và đo
+hiệu năng) được trình bày trong file báo cáo nhóm đính kèm, biên soạn bằng LaTeX. Mã nguồn
+được quản lý phiên bản tại repository:
+
+```
+https://github.com/tiendung-hust/ktlt.git
+```
