@@ -1,6 +1,6 @@
 # Hệ thống thi trắc nghiệm
 
-**Đồ án cuối kỳ — Môn Kĩ thuật lập trình (MI3310) — Đại học Bách khoa Hà Nội**
+**Bài tập lớn cuối kỳ — Môn Kĩ thuật lập trình (MI3310) — Đại học Bách khoa Hà Nội**
 
 Nhóm 12 — Chủ đề 5: Hệ thống thi trắc nghiệm
 Giảng viên hướng dẫn: Vũ Thành Nam
